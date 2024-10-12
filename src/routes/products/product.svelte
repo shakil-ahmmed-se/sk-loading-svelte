@@ -1,8 +1,9 @@
 <script>
-    export let product;
+  export let product;
 </script>
 
-
-    <h2>{product.title}</h2>
-    <p>{product.description}</p>
-    <hr>
+<a href={`/product/${product.id}`}>
+  <h2>{product.title}</h2>
+</a>
+<p>{product.description}</p>
+<hr />

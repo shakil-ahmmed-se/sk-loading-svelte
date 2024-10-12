@@ -46,11 +46,15 @@
 		},
 		{
 			"symbol": "STOCK E",
-			"price": 100.0
+			"price": 300.0
 		},
 		{
 			"symbol": "STOCK F",
 			"price": 240.0
+		},
+		{
+			"symbol": "STOCK G",
+			"price": 200
 		}
 	],
 	"most-active-stock": {

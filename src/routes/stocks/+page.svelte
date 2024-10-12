@@ -1,19 +1,15 @@
 <script>
+    import { invalidate } from "$app/navigation"
     export let data;
-    console.log(data)
+    console.log("layout page data", data.length);
+    function refresh(){
+        invalidate('http://localhost:4000/stocks')
+    }
 </script>
 
-<h1>Stock Page</h1>
-<span>{data.mostActiveStock.symbol}</span>
+<h1>Actively tradin stocks</h1>
 
-<span>Most active stock - {data.mostActiveStock.symbol}</span>
-<span>Top gaining stock - {data.topGainingStock.symbol}</span>
-<span>Top losing stock - {data.topLosingStock.symbol}</span>
-
-
-<style>
-    span{
-        margin-right: 30px;
-        font-size: 24px;
-    }
-</style>
+{#each data.stocks as stock}
+	<h2>{stock.symbol} - ${stock.price}</h2>
+{/each}
+<button on:click={refresh} >Refresh</button>
