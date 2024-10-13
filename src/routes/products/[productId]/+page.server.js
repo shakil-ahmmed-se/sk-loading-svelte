@@ -18,3 +18,6 @@ export const load = async (serverLoadEvent) =>{
         notification,
     }
 }
+
+
+export const prerender = true;
